@@ -16,7 +16,18 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+client = BudgetInsightAPI::Client.new do |config|
+  config.callback_url = "<YOUR CALLBACK URL>"
+  config.client_id = "<YOUR CLIENT ID>"
+  config.client_secret = "<YOUR CLIENT SECRET>"
+  config.url = "<YOUR URL>"
+end
+
+bank_accounts = BudgetInsightAPI::BankAccounts.new(client, user_token, user_id, connection_id)
+
+bank_transactions = BudgetInsightAPI::BankTransactions.new(client, user_token, user_id, account_id)
+```
 
 ## Development
 

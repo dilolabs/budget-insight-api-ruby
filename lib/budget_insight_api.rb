@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "budget_insight_api/version"
+module BudgetInsightAPI; end
 
-module BudgetInsightAPI
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require "budget_insight_api/client"
