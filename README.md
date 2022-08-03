@@ -33,7 +33,7 @@ user_connections = BudgetInsightAPI::UserConnections.list(client, user_token, us
 
 [Get a connection](https://docs.budget-insight.com/reference/connections#get-a-connection):
 ```
-user_connection = BudgetInsightAPI::UserConnection.get(client, user_token, user_id, connection_id)
+user_connection = BudgetInsightAPI::UserConnections.get(client, user_token, user_id, connection_id)
 ```
 
 [List bank accounts](https://docs.budget-insight.com/reference/bank-accounts#list-bank-accounts):
