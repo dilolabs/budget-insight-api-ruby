@@ -16,6 +16,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
+Configure Budget Insight API client:
 ```
 client = BudgetInsightAPI::Client.new do |config|
   config.callback_url = "<YOUR CALLBACK URL>"
@@ -23,9 +24,30 @@ client = BudgetInsightAPI::Client.new do |config|
   config.client_secret = "<YOUR CLIENT SECRET>"
   config.url = "<YOUR URL>"
 end
+```
 
-bank_accounts = BudgetInsightAPI::BankAccounts.new(client, user_token, user_id, connection_id)
+[List connections](https://docs.budget-insight.com/reference/connections#list-connections):
+```
+user_connections = BudgetInsightAPI::UserConnections.list(client, user_token, user_id)
+```
 
+[Get a connection](https://docs.budget-insight.com/reference/connections#get-a-connection):
+```
+user_connection = BudgetInsightAPI::UserConnection.get(client, user_token, user_id, connection_id)
+```
+
+[List bank accounts](https://docs.budget-insight.com/reference/bank-accounts#list-bank-accounts):
+```
+bank_accounts = BudgetInsightAPI::BankAccounts.list(client, user_token, user_id, connection_id)
+```
+
+[Get a bank account](https://docs.budget-insight.com/reference/bank-accounts#get-a-bank-account):
+```
+bank_account = BudgetInsightAPI::BankAccounts.get(client, user_token, user_id, connection_id, account_id)
+```
+
+[List transactions](https://docs.budget-insight.com/reference/bank-transactions#list-transactions):
+```
 bank_transactions = BudgetInsightAPI::BankTransactions.new(client, user_token, user_id, account_id)
 ```
 
