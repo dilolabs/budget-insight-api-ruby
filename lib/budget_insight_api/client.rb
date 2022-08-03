@@ -6,6 +6,7 @@ require "budget_insight_api/version"
 require "budget_insight_api/configuration"
 require "budget_insight_api/bank_accounts"
 require "budget_insight_api/bank_transactions"
+require "budget_insight_api/user_connections"
 
 module BudgetInsightAPI
   class Client
